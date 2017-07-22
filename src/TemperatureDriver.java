@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Created by ja on 7/3/2017.
+ * Created by M.Elmursi on 7/3/2017.
  */
 public class TemperatureDriver {
     public static void main(String[] args) {
