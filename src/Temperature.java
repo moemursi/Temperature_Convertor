@@ -33,6 +33,14 @@ public class Temperature {
         return degreeCelsius;
 
     }
+
+    public void setDegreeCelsius(double degrees) {
+        degreeCelsius = Math.round(degrees);    // sets the Fahrenhite value
+        degreeFahrenhite = Math.round(((degreeCelsius * 9) / 5.0) + 32); // set Celsius
+        degreeKelvin = Math.round(degreeCelsius + 273.15); // set Kelvin Value
+
+    }
+
     /**
      * getDegreeFahrenheit   retrieves the celsius temperature value
      * @ return a double value containing the Fahrenheit temperature
@@ -52,28 +60,23 @@ public class Temperature {
         return degreeKelvin;
     }
 
+    public void setDegreeKelvin(double degrees) {
+        degreeKelvin = Math.round(degrees);    // sets the Fahrenhite value
+        degreeFahrenhite = Math.round((degreeKelvin - 2733.15) * 9 / 5 + 32); // set Kelvin Value
+
+        degreeCelsius = Math.round(degreeKelvin - 273.15); // set Celsius
+
+    }
+
     /**
      * The setDegreeFahrenheit method sets the fahrenhite temperature
      * @param degrees the Fahrenhite value to store
      */
 
     public void setDegreeFahrenheit(double degrees){
-        degreeFahrenhite = degrees ;    // sets the Fahrenhite value
-        degreeCelsius = (degreeFahrenhite -32.0)* 5.0 / 9.0; // set Celsius
-        degreeKelvin = degreeCelsius + 2733.15 ; // set Kelvin Value
-
-    }
-    public void setDegreeCelsius(double degrees){
-        degreeCelsius = degrees ;    // sets the Fahrenhite value
-        degreeFahrenhite = ((degreeCelsius*9)/ 5.0)+32; // set Celsius
-        degreeKelvin = degreeCelsius + 273.15 ; // set Kelvin Value
-
-    }
-    public void setDegreeKelvin(double degrees){
-        degreeKelvin = degrees ;    // sets the Fahrenhite value
-        degreeFahrenhite = (degreeKelvin - 2733.15 )*9/5+32; // set Kelvin Value
-
-        degreeCelsius = degreeKelvin - 273.15; // set Celsius
+        degreeFahrenhite = Math.round(degrees);    // sets the Fahrenhite value
+        degreeCelsius = Math.round((degreeFahrenhite - 32.0) * 5.0 / 9.0); // set Celsius
+        degreeKelvin = Math.round(degreeCelsius + 2733.15); // set Kelvin Value
 
     }
 
